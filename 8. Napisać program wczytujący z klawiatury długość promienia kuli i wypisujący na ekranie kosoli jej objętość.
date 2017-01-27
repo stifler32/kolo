@@ -1,0 +1,17 @@
+namespace _8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //8. Napisać program wczytujący z klawiatury długość promienia kuli i wypisujący na ekranie kosoli jej objętość. 
+
+            float i;
+            Console.WriteLine("Podaj promien kuli");
+            i = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Objetosc to: " + 4*Math.PI*i*i*i/3);
+            
+            Console.ReadKey();
+        }
+    }
+}
