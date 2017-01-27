@@ -1,0 +1,28 @@
+namespace _50
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*50. Napisać program wypisujący na ekranie kolejne liczby naturalne podzielne przez 7. 
+            Ilość liczb podaje użytkownik(zmienna ile). Użyć pętli for. 
+            Na przykład jeśli ile=6 program powinien wypisać 0, 7, 14, 21, 28, 35.*/
+            Console.WriteLine("Podaj Granice wypisywania");
+            int i = Convert.ToInt32(Console.ReadLine());
+            int l = 0;
+            int k = 1;
+            for (;;)
+            {
+                if (k%7 == 0)
+                {
+                    Console.Write("{0}, ",k);
+                    l++;
+                }
+                if(l == i)
+                    break;
+                k++;
+            }
+            Console.ReadKey();
+        }
+    }
+}
