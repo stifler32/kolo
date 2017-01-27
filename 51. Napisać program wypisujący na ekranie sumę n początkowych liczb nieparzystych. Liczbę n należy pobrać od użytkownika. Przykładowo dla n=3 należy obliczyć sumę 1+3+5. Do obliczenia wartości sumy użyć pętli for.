@@ -1,0 +1,30 @@
+namespace _51
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*51. Napisać program wypisujący na ekranie sumę n początkowych liczb nieparzystych. Liczbę n należy pobrać od użytkownika. 
+            Przykładowo dla n=3 należy obliczyć sumę 1+3+5. Do obliczenia wartości sumy użyć pętli for.*/
+
+            Console.WriteLine("Podaj Granice wypisywania");
+            int i = Convert.ToInt32(Console.ReadLine());
+            int l = 0;
+            int s = 0;
+            int k = 1;
+            for (;;)
+            {
+                if (k%2 != 0)
+                {
+                    s = s + k;
+                    l++;
+                }
+                if (l == i)
+                    break;
+                k++;
+            }
+            Console.WriteLine("SUMA: {0}",s);
+            Console.ReadKey();
+        }
+    }
+}
