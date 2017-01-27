@@ -1,0 +1,19 @@
+namespace _47
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            /*47. Napisać program wypisujący na ekranie konsoli te spośród liczb od 1 do 1000 które są podzielne przez 13. 
+            Użyć pętli for.*/
+
+            for (int i = 1; i <= 1000; i++)
+            {
+                if (i%13 == 0)
+                    Console.Write("{0} ", i);
+            }
+            Console.ReadKey();
+        }
+    }
+}
