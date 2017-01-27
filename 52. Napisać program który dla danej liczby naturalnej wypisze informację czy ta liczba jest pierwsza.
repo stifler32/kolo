@@ -1,0 +1,55 @@
+namespace _52
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*52. Napisać program który dla danej liczby naturalnej wypisze informację czy ta liczba jest pierwsza. 
+
+            uwaga: Liczba naturalna n jest pierwsza jeśli jedynymi jej dzielnikami naturalnymi są liczby 1 i n. 
+            Zauważmy, że liczba 1 spełnia tę własność ale zgodnie z tradycją jedynki nie włącza się do zbioru liczb pierwszych. 	*/
+
+            int licznik = 0;
+            int j;
+            Console.WriteLine("Podaj liczbe do sprawdzenia czy jest pierwsza");
+            int i = Convert.ToInt32(Console.ReadLine());
+            if( i== 0)
+            {
+                Console.WriteLine("0 nie należy do zbioru liczb pierwszych");
+
+            }else if (i==1)
+            {
+                Console.WriteLine("1 nie należy do zbioru liczb pierwszych");
+            }
+            else
+            {
+                for(j = 1; j < Math.Sqrt(i); j++)
+                {
+                    if(i%j==0)
+                    {
+                        licznik++;
+                        Console.WriteLine(j);
+                        if(licznik >1 )
+                        {
+                            goto przerwij;
+                        }
+                    }
+                    
+                }
+                //Console.WriteLine(j);
+                //Console.WriteLine(licznik);
+                przerwij:
+                Console.WriteLine("Wykonano iteracji: {0}", j);
+                if(licznik == 1)
+                {
+                    Console.WriteLine("Liczba jest pierwsza");
+                }
+                else
+                {
+                    Console.WriteLine("Liczba nie jest pierwsza");
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
