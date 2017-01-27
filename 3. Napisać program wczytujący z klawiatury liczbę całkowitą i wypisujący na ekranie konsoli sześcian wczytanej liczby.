@@ -1,0 +1,15 @@
+namespace _3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Podaj Liczbę do działania");
+            int i, w = 0;
+            i=Convert.ToInt32(Console.ReadLine());
+            w = i * i * i;
+            Console.WriteLine("Wynik to: " + w);
+            Console.ReadKey();
+        }
+    }
+}
