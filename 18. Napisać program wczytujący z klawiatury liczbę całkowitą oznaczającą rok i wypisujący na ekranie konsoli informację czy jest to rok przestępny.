@@ -1,0 +1,39 @@
+namespace _18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*18. Napisać program wczytujący z klawiatury liczbę całkowitą 
+            oznaczającą rok i wypisujący na ekranie konsoli informację czy jest to rok przestępny.*/
+
+            int a,b=0;
+            Console.WriteLine("Podaj rok do sprawdzenia przestępczości");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a%4 == 0)
+            {
+
+                if (a%100 != 0)
+                {
+                    Console.WriteLine("Przestępny1");
+                    b = 1;
+                }
+                  
+            }
+
+            if (b==0)
+            {
+
+
+                if (a%400 == 0)
+                    Console.WriteLine("Przestępny");
+                else
+                {
+                    Console.WriteLine("NIE Przestępny");
+                }
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
