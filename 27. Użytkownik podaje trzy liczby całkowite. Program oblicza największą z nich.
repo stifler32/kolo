@@ -1,0 +1,33 @@
+namespace _27
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //27. Użytkownik podaje trzy liczby całkowite. Program oblicza największą z nich. 
+
+            int a, b, c,d;
+            Console.WriteLine("Podaj 3 liczbe calkowite");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
+
+            if (b > a)
+            {
+                d = a;
+                a = b;
+                b = d;
+            }
+            if (c > a)
+            {
+                d = a;
+                a = c;
+                c = a;
+            }
+            Console.WriteLine(a);
+            Console.ReadKey();
+
+
+        }
+    }
+}
