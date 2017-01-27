@@ -1,0 +1,30 @@
+namespace _9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //9. Napisać program wczytujący z klawiatury dwie liczby całkowite a i b i wypisujący na ekranie konsoli wynik dzielenia całkowitego a przez b. 
+
+            int i, j, k;
+            k = 0;
+            do
+            {
+                Console.WriteLine("Podaj pierwsza bok");
+                i = System.Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Podaj drugą bok");
+                j = System.Convert.ToInt32(Console.ReadLine());
+
+                if (j == 0)
+                {
+                    Console.WriteLine("Nie można dzielić przez 0");
+                    Console.ReadKey();
+                    break;
+                }
+                Console.WriteLine("Wynik dzielenia całkowitego: {0}", i / j);
+                k = 1;
+                Console.ReadKey();
+            } while (k == 0);
+        }
+    }
+}
