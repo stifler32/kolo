@@ -1,0 +1,26 @@
+namespace _35
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*35. Napisać program który losuje 5 punktów z koła o promieniu 1. 
+            Współrzędne dla każdego punktu powinny być wpisane w osobnych liniach. (skorzystać z poprzedniego ćwiczenia)*/
+            int l = 0;
+            double x, y;
+            Console.WriteLine("Yo, wypisuje 5 punktów w okregu o promieniu 1");
+            Random rnd = new Random();
+            do
+            {
+                x = rnd.NextDouble(); //Random.NextDouble() Returns a random floating-point number that is greater than or equal to 0.0, and less than 1.0.
+                y = rnd.NextDouble();
+                if ((x*x) + (y*y) <= 1) //podstawienie pod rownanie okręgu
+                {
+                    Console.WriteLine("{0:F2},{1:F2}", x,y);
+                    l++;
+                }
+            } while (l<=5);
+            Console.ReadKey();
+        }
+    }
+}
