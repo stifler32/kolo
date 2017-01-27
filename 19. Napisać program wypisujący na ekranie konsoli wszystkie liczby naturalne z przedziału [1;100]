@@ -1,0 +1,14 @@
+namespace _19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //19. Napisać program wypisujący na ekranie konsoli wszystkie liczby naturalne z przedziału [1;100]
+            for (int i = 1; i <= 100; i++)
+                Console.Write("{0} ", i);
+
+            Console.ReadKey();
+        }
+    }
+}
