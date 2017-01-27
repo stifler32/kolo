@@ -1,0 +1,16 @@
+namespace _31
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //31. Napisać program wypisujący na ekranie konsoli w jednej linijce znaki od 'A' do 'Z' (użyć tylko raz pętli for)
+            for (int i = 90; i >=65 ; i--)
+            {
+                Console.Write("{0}", (char)(i));
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
