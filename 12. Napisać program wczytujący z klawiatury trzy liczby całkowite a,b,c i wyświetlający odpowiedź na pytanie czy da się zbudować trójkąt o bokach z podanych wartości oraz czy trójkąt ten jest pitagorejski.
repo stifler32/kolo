@@ -1,0 +1,49 @@
+namespace _12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //12. Napisać program wczytujący z klawiatury trzy liczby całkowite a,b,c i wyświetlający odpowiedź na pytanie 
+            //czy da się zbudować trójkąt o bokach z podanych wartości oraz czy trójkąt ten jest pitagorejski.
+
+            int i, j, k,a,b,c;
+            Console.WriteLine("Podaj pierwsza bok");
+            i = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj drugą bok");
+            j = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj drugą bok");
+            k = System.Convert.ToInt32(Console.ReadLine());
+            a = i * i;
+            b = j * j;
+            c = k * k;
+
+            if (i + j > k && j + k > i && k+i>j)
+            {
+                Console.WriteLine("Da sie");
+                if(i>j && i>k && a==b+c)
+                {
+                    Console.WriteLine("Pitagorejski");
+                }
+                if (j > k && j > i && b==a+c)
+                {
+                    Console.WriteLine("Pitagorejski");
+                }
+               
+                if (k > i && k > j && c==a+b)
+                {
+                    Console.WriteLine("Pitagorejski");
+                }
+            }
+            
+            else
+            {
+                Console.WriteLine("Ni da się");
+            }
+            
+
+            Console.ReadKey();
+            
+        }
+    }
+}   
