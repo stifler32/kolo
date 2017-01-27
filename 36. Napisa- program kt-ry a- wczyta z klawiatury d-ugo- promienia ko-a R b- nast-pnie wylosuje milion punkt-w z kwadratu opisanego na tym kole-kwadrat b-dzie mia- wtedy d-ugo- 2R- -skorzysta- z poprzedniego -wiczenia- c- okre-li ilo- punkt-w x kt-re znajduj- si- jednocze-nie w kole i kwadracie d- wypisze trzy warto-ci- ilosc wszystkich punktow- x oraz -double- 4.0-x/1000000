@@ -1,0 +1,48 @@
+namespace _36_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*36. Napisać program który
+            a) wczyta z klawiatury długość promienia koła R
+            b) następnie wylosuje milion punktów z kwadratu opisanego na tym kole
+               (kwadrat będzie miał wtedy długość 2R) (skorzystać z poprzedniego ćwiczenia)
+            c) określi ilość punktów x które znajdują się jednocześnie w kole i kwadracie
+            d) wypisze trzy wartości: ilosc wszystkich punktow, x oraz (double) 4.0*x/1000000 */
+
+            Console.WriteLine("Podaj R badanego okręgu");
+            Random rnd = new Random();
+            int r = Convert.ToInt32(Console.ReadLine());
+            int gornaGranica = r;
+            int dolnaGranica = -r;
+            int l = 1;
+            int l2 = 0;
+            double x, y,wynik;
+            // losowanie miliona punktów
+            while (l < 1000000)
+            {
+                x = rnd.NextDouble() * (gornaGranica - dolnaGranica) + dolnaGranica; // Instrukcje szukają punktów <-r, r>
+                y = rnd.NextDouble() * (gornaGranica - dolnaGranica) + dolnaGranica; // działa to źle przy większych liczbach, 
+                //x = r*rnd.NextDouble(); // Kod od SAgaty, prostrze bo bez ujemnych. Nie wiedziałem ze tak można
+                //y = r*rnd.NextDouble();
+
+
+                if ((x >= 0 && x <= r) && (y >= -0 && y <= r*r)) //warunek kwadratu, konieczny tylko przy ujemnych ale w sumie bez też działa   
+                {                                               // ponieważ mamy przy NextDouble() ustawiony odpowiedni zakres
+                    if ((x*x) + (y*y) <= r*r)
+                   {
+                        //Console.WriteLine("{0:F2} {1:F2}", x, y); // wyświetla punkty kwadratowo-okręgowe
+                        l2++;
+                   }
+                    l++;
+                }
+                
+            }
+            
+
+           Console.WriteLine("Liczba punktów: {0}, Wspólnych: {1}, Działanie: {2:F4}",l,l2, (double)(4.0*l2)/l); // wynikiem będzie pi XD 
+            Console.ReadKey();
+        }
+    }
+}
