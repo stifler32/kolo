@@ -1,0 +1,25 @@
+namespace _17
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*17.Napisać program wczytujący z klawiatury liczbę całkowitą i 
+                wypisujący na ekran konsoli informację o jej znaku(dodatnia, ujemna czy zero).*/
+            int a;
+            Console.WriteLine("Podaj liczbę do sprawdzenia parzystości");
+            a = Convert.ToInt32(Console.ReadLine());
+            if(a>0)
+                Console.WriteLine("Dodatnia");
+            else if(a==0)
+                Console.WriteLine("Zero");
+            else
+            {
+                Console.WriteLine("Ujemna");
+            }
+
+        
+            Console.ReadKey();
+        }
+    }
+}
