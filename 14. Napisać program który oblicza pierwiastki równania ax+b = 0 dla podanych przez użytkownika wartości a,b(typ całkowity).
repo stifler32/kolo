@@ -1,0 +1,18 @@
+namespace _14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //14. Napisać program który oblicza pierwiastki równania ax+b = 0 dla podanych przez użytkownika wartości a,b.
+            int i, j;
+            Console.WriteLine("Podaj a");
+            i = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj b");
+            j = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("X: " + j / i * -1);
+            Console.ReadKey();
+        }
+
+    }
+}
