@@ -1,0 +1,29 @@
+namespace _24
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //24. Napisać program wypisujący na ekranie konsoli sumę wszystkich liczb naturalnych nieparzystych z przedziału [1;x], 
+            //gdzie x podaje użytkownik w trakcie działania programu. (użyć tylko raz pętli for)
+
+            int a, b = 0;
+            Console.WriteLine("Podaj liczbe do obliczenai sumy liczb");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= a; i++)
+            {
+                if (i%2 != 0)
+                {
+                    b = b + i;
+                }
+            }
+        
+               
+
+            Console.WriteLine(b);
+
+            Console.ReadKey();
+        }
+    }
+}
