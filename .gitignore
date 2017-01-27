@@ -1,0 +1,31 @@
+
+11. Napisać program wczytujący z klawiatury trzy liczby całkowite a,b,c i wyświetlający odpowiedź na pytanie czy da się zbudować trójkąt o bokach z podanych wartości.
+
+namespace _11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //11. Napisać program wczytujący z klawiatury trzy liczby całkowite a,b,c i 
+            //wyświetlający odpowiedź na pytanie czy da się zbudować trójkąt o bokach z podanych wartości. 
+            int i, j,k;
+            Console.WriteLine("Podaj pierwsza bok");
+            i = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj drugą bok");
+            j = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj drugą bok");
+            k = System.Convert.ToInt32(Console.ReadLine());
+
+            if(i+j>k && j+k>i)
+            {
+                Console.WriteLine("Da sie");
+            }
+            else
+            {
+                Console.WriteLine("Ni da się");
+            }
+            Console.ReadKey();
+        }
+    }
+}
