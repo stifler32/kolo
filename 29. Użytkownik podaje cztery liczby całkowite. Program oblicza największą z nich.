@@ -1,0 +1,35 @@
+namespace _29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //27. Użytkownik podaje trzy liczby całkowite. Program oblicza największmniejszą z nich.
+            int[] tabp;
+            int temp = 0;
+            tabp = new int[4];
+            Console.WriteLine("Podaj 4 liczbe calkowite");
+            for (int i = 0; i < 4; i++)
+            {
+                tabp[i] = Convert.ToInt32(Console.ReadLine());
+              
+                // koncepcja z 28 nie zatrybi. Zatrubiłaby ale za dużo roboty, to wymyśliłem takie coś 
+
+                if (i <= 0) continue; // Pomijam pierwsze wykonanie bo wyjdę po za tablice
+                if (tabp[i] > tabp[0])
+                {
+                    temp = tabp[0]; //tab[0] przesunięte - największe izi 
+                    tabp[0] = tabp[i];
+                    tabp[i] = temp; // zachowuje dane w tablicy 
+                }
+               
+            }
+            
+
+            Console.WriteLine("MAX: {0}", tabp[0]);
+
+            Console.ReadKey();
+        }
+    }
+
+}
