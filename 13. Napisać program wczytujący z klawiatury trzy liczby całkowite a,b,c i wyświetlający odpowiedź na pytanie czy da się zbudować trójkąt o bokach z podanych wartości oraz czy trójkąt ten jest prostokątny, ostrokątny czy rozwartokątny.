@@ -1,0 +1,73 @@
+namespace _13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //13. Napisać program wczytujący z klawiatury trzy liczby całkowite a,b,c i wyświetlający odpowiedź na pytanie 
+            //czy da się zbudować trójkąt o bokach z podanych wartości oraz czy trójkąt ten jest prostokątny, ostrokątny czy rozwartokątny.
+            int i, j, k, a, b, c,d=0,e=0,f=0;
+            Console.WriteLine("Podaj pierwsza bok");
+            i = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj drugą bok");
+            j = System.Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj drugą bok");
+            k = System.Convert.ToInt32(Console.ReadLine());
+            a = i * i;
+            b = j * j;
+            c = k * k;
+
+            if (i + j > k && j + k > i && k + i > j)
+            {
+                Console.WriteLine("Da sie");
+                if (i > b)
+                {
+                    d = a;
+                    e = b;
+                    f = c;
+                }
+                if (b > a)
+                {
+                    d = b;
+                    e = a;
+                    f = c;
+                }
+                if (c > a)
+                {
+                    d = c;
+                    e = a;
+                    f = b;
+                }
+                if (c > b)
+                {
+                    d = c;
+                    e = a;
+                    f = b;
+                }
+                //Console.WriteLine("Wynyky"+ d + e + f);
+                if(d<e+f)
+                {
+                    Console.WriteLine("Ostrokątny");
+                }
+                if(d==e+f)
+                {
+                    Console.WriteLine("Prostokątny");
+                }
+                if(d>e+f)
+                {
+                    Console.WriteLine("Rozwartokątny");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Ni da się");
+            }
+
+
+            Console.ReadKey();
+
+        }
+    }
+}   
+        
