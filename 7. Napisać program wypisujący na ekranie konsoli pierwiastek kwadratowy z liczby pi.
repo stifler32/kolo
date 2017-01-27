@@ -1,0 +1,13 @@
+namespace _7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //7. Napisać program wypisujący na ekranie konsoli pierwiastek kwadratowy z liczby pi. 
+            Console.WriteLine("Pierwiastek z pi to: " + Math.Sqrt(Math.PI));
+            Console.ReadKey();
+
+        }
+    }
+}
