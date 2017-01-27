@@ -1,0 +1,42 @@
+namespace _40
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*40. Napisać program który pobiera od użytkownika 5 liczb które umieszcza w tablicy o nazwie tablica. 
+            Następnie pobiera od użytkownika dodatkową liczbę. Na koniec sprawdza czy ta liczba znajduje się w tablicy. */
+            int[] tab = new int[5];
+            int l = 0;
+            int err_cont = 0;
+
+            Console.WriteLine("Podaj 5 liczb mości panie");
+            for (int i = 0; i < 5; i++)
+            {
+                tab[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+            Console.WriteLine("Poproszę o liczbę do sprawdzenia");
+            l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Dziękuję serdecznie, już szukam...");
+            for (int i = 0; i < 5; i++)
+            {
+                if (tab[i] == l)
+                {
+                    Console.WriteLine("No patrz! Jest taki element!");
+                    break;
+                }
+            
+                else
+                {
+                    err_cont++;
+                }
+            }
+            if (err_cont == 5)
+            {
+                Console.WriteLine("Niestety nie było takiego elementu");
+            }
+            Console.ReadKey();
+        }
+    }
+}
