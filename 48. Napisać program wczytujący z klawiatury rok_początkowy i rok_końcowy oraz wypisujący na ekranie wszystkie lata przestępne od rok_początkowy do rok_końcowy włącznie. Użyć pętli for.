@@ -1,0 +1,38 @@
+namespace _48
+{
+    class Program
+    {
+        static void CheckYear(int a)
+        {
+            int b = 0;       // kod przeklejony z zadania 18 :P 
+            if (a % 4 == 0)
+            {
+                if (a % 100 != 0)
+                {
+                    Console.WriteLine("{0} ",a);
+                    b = 1;
+                }
+            }
+            if (b == 0)
+            {
+                if (a % 400 == 0)
+                    Console.WriteLine("{0} ", a);
+            }
+        }
+        static void Main(string[] args)
+        {
+            /*48. Napisać program wczytujący z klawiatury rok_początkowy i rok_końcowy oraz wypisujący na ekranie wszystkie lata
+            przestępne od rok_początkowy do rok_końcowy włącznie. Użyć pętli for. */
+            int a, b;
+            Console.WriteLine("Podaj dolny zakres lat");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Podaj górny zakres lat");
+            b = Convert.ToInt32(Console.ReadLine());
+            for (int i = a; i <= b; i++)
+            {
+                CheckYear(i);
+            }
+            Console.ReadKey();
+        }
+    }
+}
